@@ -7,14 +7,15 @@ export default function App() {
       <Grid
         templateAreas={{
           base: `"nav" "main"`,
-          lg: `"nav nav" "aside main"`, // larger than 1024px
+          md: `"nav" "aside" "main"`,
+          lg: `"nav nav" "aside main"`,
         }}
       >
         <GridItem area="nav">
           <NavBar />
         </GridItem>
-        <Show above="lg">
-          <GridItem area="aside">Aside</GridItem>
+        <Show above="md">
+          <GridItem area="aside">aside</GridItem>
         </Show>
         <GridItem area="main">Main</GridItem>
       </Grid>
