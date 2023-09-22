@@ -12,7 +12,7 @@ export default function App() {
           lg: `"nav nav" "aside main"`,
         }}
       >
-        <GridItem area="nav">
+        <GridItem area="nav" bg="blackAlpha.200">
           <NavBar />
         </GridItem>
         <Show above="md">
