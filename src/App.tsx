@@ -12,13 +12,19 @@ export default function App() {
           lg: `"nav nav" "aside main"`,
         }}
       >
-        <GridItem area="nav" bg="blackAlpha.200">
+        <GridItem area="nav">
           <NavBar />
         </GridItem>
         <Show above="md">
-          <GridItem area="aside">aside</GridItem>
+          <GridItem area="aside">Aside</GridItem>
         </Show>
-        <GridItem area="main">
+        <GridItem
+          area="main"
+          padding={{
+            base: 2,
+            lg: 5,
+          }}
+        >
           <GameGrid />
         </GridItem>
       </Grid>

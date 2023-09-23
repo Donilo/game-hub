@@ -4,10 +4,10 @@ import ColorModeSwitch from "./ColorModeSwitch";
 
 export default function NavBar() {
   return (
-    <HStack justifyContent="space-between" paddingRight="10px">
+    <HStack justifyContent="space-between" paddingRight={2} bg="blackAlpha.100">
       <HStack>
-        <Image src={logo} boxSize="60px" />
-        <Text>GameHub</Text>
+        <Image src={logo} boxSize={"60px"} />
+        <Text fontSize={"3xl"}>GameHub</Text>
       </HStack>
 
       <ColorModeSwitch />

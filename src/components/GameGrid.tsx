@@ -9,9 +9,12 @@ export default function GameGrid() {
     <>
       {error && <Text>{error}</Text>}
       <SimpleGrid
-        columns={{ sm: 1, md: 2, lg: 3 }}
+        columns={{
+          base: 1,
+          md: 2,
+          lg: 3,
+        }}
         spacing={10}
-        padding={{ base: 3, lg: 10 }}
       >
         {games.map((game) => (
           <GameCard key={game.id} game={game} />
