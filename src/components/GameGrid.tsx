@@ -17,7 +17,7 @@ export default function GameGrid() {
         spacing={10}
       >
         {games.map((game) => (
-          <GameCard key={game.id} game={game} />
+          <GameCard game={game} />
         ))}
       </SimpleGrid>
     </>
