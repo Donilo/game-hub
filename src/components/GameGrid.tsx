@@ -17,7 +17,7 @@ export default function GameGrid() {
           md: 2,
           lg: 3,
         }}
-        spacing={10}
+        spacing={6}
       >
         {isLoading &&
           skeletons.map((skeleton) => (

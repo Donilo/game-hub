@@ -13,7 +13,7 @@ export default function GameCard({ game }: Props) {
     <Card overflow="hidden">
       <Image src={getCroppedImageUrl(game.background_image)} />
       <CardBody>
-        <Heading fontSize="22px">{game.name}</Heading>
+        <Heading fontSize="20px">{game.name}</Heading>
         <HStack justifyContent="space-between">
           <PlatformIconList
             platforms={game.parent_platforms.map((p) => p.platform)}

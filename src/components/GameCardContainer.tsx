@@ -6,15 +6,5 @@ interface Props {
 }
 
 export default function GameCardContainer({ children }: Props) {
-  return (
-    <Box
-      width={{
-        base: "full",
-        md: "full",
-        lg: "300px",
-      }}
-    >
-      {children}
-    </Box>
-  );
+  return <Box>{children}</Box>;
 }
