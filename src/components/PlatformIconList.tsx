@@ -1,13 +1,13 @@
 import {
   FaWindows,
+  FaApple,
   FaPlaystation,
   FaXbox,
-  FaApple,
-  FaLinux,
   FaAndroid,
+  FaLinux,
 } from "react-icons/fa";
-import { SiNintendo3Ds } from "react-icons/si";
 import { MdPhoneIphone } from "react-icons/md";
+import { SiNintendo3Ds } from "react-icons/si";
 import { BsGlobe } from "react-icons/bs";
 import { HStack, Icon } from "@chakra-ui/react";
 import { Platform } from "../hooks/useGames";
@@ -22,17 +22,18 @@ export default function PlatformIconList({ platforms }: Props) {
     pc: FaWindows,
     playstation: FaPlaystation,
     xbox: FaXbox,
-    mac: FaApple,
     linux: FaLinux,
+    mac: FaApple,
     android: FaAndroid,
-    nintendo: SiNintendo3Ds,
     ios: MdPhoneIphone,
+    nintendo: SiNintendo3Ds,
     web: BsGlobe,
   };
+
   return (
     <HStack marginY={2}>
       {platforms.map((platform) => (
-        <Icon as={iconMap[platform.slug]} color="gray.500" />
+        <Icon as={iconMap[platform.slug]} color="gray.500" fontSize="1xl" />
       ))}
     </HStack>
   );

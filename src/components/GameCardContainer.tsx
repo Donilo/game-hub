@@ -10,11 +10,9 @@ export default function GameCardContainer({ children }: Props) {
     <Box
       width={{
         base: "full",
+        md: "full",
         lg: "300px",
       }}
-      margin="auto"
-      borderRadius={5}
-      overflow="hidden"
     >
       {children}
     </Box>

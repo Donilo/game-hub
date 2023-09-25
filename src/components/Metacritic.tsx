@@ -5,7 +5,10 @@ interface Props {
 }
 
 export default function Metacritic({ metacritic }: Props) {
-  let color = metacritic > 80 ? "green" : metacritic > 60 ? "yellow" : "";
-
-  return <Badge colorScheme={color}>{metacritic}</Badge>;
+  let color = metacritic > 80 ? "green" : metacritic > 65 ? "yellow" : "";
+  return (
+    <Badge fontSize="1xl" colorScheme={color}>
+      {metacritic}
+    </Badge>
+  );
 }
