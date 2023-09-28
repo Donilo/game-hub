@@ -19,6 +19,7 @@ export default function PlatformSelector({
       <MenuButton as={Button} rightIcon={<BsChevronDown />}>
         {selectedPlatform?.name || "Platforms"}
       </MenuButton>
+
       <MenuList>
         {data.map((platform) => (
           <MenuItem

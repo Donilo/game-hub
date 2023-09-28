@@ -26,8 +26,8 @@ export default function GenreList({ onSelectGenre, selectedGenre }: Props) {
               src={getCroppedImageUrl(genre.image_background)}
             />
             <Button
-              fontWeight={genre.id === selectedGenre?.id ? "bold" : "normal"}
               onClick={() => onSelectGenre(genre)}
+              fontWeight={genre.id === selectedGenre?.id ? "bold" : "normal"}
               fontSize="lg"
               variant="link"
             >

@@ -45,10 +45,10 @@ export default function App() {
             lg: 5,
           }}
         >
-          <Box marginY={2}>
+          <Box marginY={3}>
             <PlatformSelector
-              selectedPlatform={selectedPlatform}
               onSelectPlatform={(platform) => setSelectedPlatform(platform)}
+              selectedPlatform={selectedPlatform}
             />
           </Box>
           <GameGrid
