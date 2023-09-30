@@ -11,9 +11,9 @@ export default function PlatformSelector({
   onSelectPlatform,
   selectedPlatform,
 }: Props) {
-  const { data, error } = usePlatforms();
+  const { data, error, isLoading } = usePlatforms();
 
-  if (error) return null;
+  // if (error) return null;
   return (
     <Menu>
       <MenuButton as={Button} rightIcon={<BsChevronDown />}>
