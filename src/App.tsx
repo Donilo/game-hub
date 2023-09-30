@@ -7,6 +7,7 @@ import SortSelector from "./components/SortSelector";
 import { useState } from "react";
 import { Genre } from "./hooks/useGenres";
 import { Platform } from "./hooks/usePlatforms";
+import GameHeading from "./components/GameHeading";
 
 export interface GameQuery {
   genre: Genre | null;
@@ -54,6 +55,7 @@ export default function App() {
             lg: 5,
           }}
         >
+          <GameHeading gameQuery={gameQuery} />
           <HStack marginY={3}>
             <PlatformSelector
               onSelectPlatform={(platform) =>
