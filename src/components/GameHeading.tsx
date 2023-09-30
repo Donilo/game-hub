@@ -11,7 +11,7 @@ export default function GameHeading({ gameQuery }: Props) {
   } Games`;
 
   return (
-    <Heading marginBlockEnd={5} as="h1" fontSize="5xl">
+    <Heading marginBottom={5} as="h1" fontSize="5xl">
       {heading}
     </Heading>
   );

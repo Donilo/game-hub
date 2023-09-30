@@ -28,7 +28,7 @@ export default function App() {
         }}
         templateColumns={{
           base: "1fr",
-          lg: "260px 1fr",
+          lg: "200px 1fr",
         }}
       >
         <GridItem area="nav">
@@ -56,7 +56,7 @@ export default function App() {
           }}
         >
           <GameHeading gameQuery={gameQuery} />
-          <HStack marginY={3}>
+          <HStack marginY={3} spacing={3}>
             <PlatformSelector
               onSelectPlatform={(platform) =>
                 setGameQuery({ ...gameQuery, platform })
