@@ -13,13 +13,13 @@ export default function GameCard({ game }: Props) {
     <Card overflow="hidden">
       <Image src={getCroppedImageUrl(game.background_image)} />
       <CardBody>
-        <Heading fontSize="20px">{game.name}</Heading>
-        <HStack justifyContent="space-between">
+        <HStack justifyContent="space-between" marginBottom={2}>
           <PlatformIconList
             platforms={game.parent_platforms.map((p) => p.platform)}
           />
           <Metacritic metacritic={game.metacritic} />
         </HStack>
+        <Heading fontSize="20px">{game.name}</Heading>
       </CardBody>
     </Card>
   );
