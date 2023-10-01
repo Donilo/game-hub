@@ -3,11 +3,11 @@ import NavBar from "./components/NavBar";
 import GameGrid from "./components/GameGrid";
 import GenreList from "./components/GenreList";
 import PlatformSelector from "./components/PlatformSelector";
-import SortSelector from "./components/SortSelector";
 import { useState } from "react";
 import { Genre } from "./hooks/useGenres";
 import { Platform } from "./hooks/usePlatforms";
 import GameHeading from "./components/GameHeading";
+import SortSelector from "./components/SortSelector";
 
 export interface GameQuery {
   genre: Genre | null;
@@ -64,10 +64,10 @@ export default function App() {
               selectedPlatform={gameQuery.platform}
             />
             <SortSelector
-              onSelectSortOrder={(orderBy) =>
+              onSelectSort={(orderBy) =>
                 setGameQuery({ ...gameQuery, orderBy })
               }
-              selectedOrdering={gameQuery.orderBy}
+              selectedOrder={gameQuery.orderBy}
             />
           </HStack>
           <GameGrid gameQuery={gameQuery} />

@@ -40,7 +40,7 @@ export default [
     slug: "nintendo",
   },
   {
-    id: 8,
+    id: 14,
     name: "Web",
     slug: "web",
   },

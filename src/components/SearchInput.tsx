@@ -17,11 +17,11 @@ export default function SearchInput({ onSearch }: Props) {
       }}
     >
       <InputGroup>
-        <InputLeftElement children={<BsSearch />} color="gray" />
+        <InputLeftElement children={<BsSearch />} color="gray.500" />
         <Input
           ref={ref}
-          borderRadius={20}
           placeholder="Search games..."
+          borderRadius="20px"
           variant="filled"
         />
       </InputGroup>
