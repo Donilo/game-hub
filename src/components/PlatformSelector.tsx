@@ -11,7 +11,7 @@ export default function PlatformSelector({
   onSelectPlatform,
   selectedPlatform,
 }: Props) {
-  const { data, error, isLoading } = usePlatforms();
+  const { data } = usePlatforms();
 
   // if (error) return null;
   return (
