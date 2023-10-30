@@ -6,5 +6,14 @@ interface Props {
 }
 
 export default function GameCardContainer({ children }: Props) {
-  return <Box>{children}</Box>;
+  return (
+    <Box
+      _hover={{
+        transform: "scale(1.02)",
+        transition: "transform .15s ease-in",
+      }}
+    >
+      {children}
+    </Box>
+  );
 }
