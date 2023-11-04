@@ -7,7 +7,9 @@ import { Link } from "react-router-dom";
 export default function NavBar() {
   return (
     <HStack padding={2} bg="blackAlpha.100">
-      <Image src={logo} boxSize={"60px"} />
+      <Link to="/">
+        <Image src={logo} boxSize={"60px"} objectFit="cover" />
+      </Link>
       <Show above="md">
         <Text fontSize="2xl">
           <Link to="/">GameHub</Link>
@@ -15,7 +17,6 @@ export default function NavBar() {
       </Show>
 
       <SearchInput />
-
       <ColorModeSwitch />
     </HStack>
   );

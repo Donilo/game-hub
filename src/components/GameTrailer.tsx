@@ -1,3 +1,4 @@
+import { Box, Text } from "@chakra-ui/react";
 import useTrailers from "../hooks/useTrailers";
 
 interface Props {
@@ -15,5 +16,10 @@ export default function GameTrailer({ gameId }: Props) {
 
   return firstObj ? (
     <video src={firstObj.data[480]} poster={firstObj.preview} controls />
-  ) : null;
+  ) : (
+    <Box>
+      <Text marginBottom={2}>No trailer is here to serve.</Text>
+      <video controls />
+    </Box>
+  );
 }
