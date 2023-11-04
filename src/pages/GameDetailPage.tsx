@@ -4,21 +4,23 @@ import { Heading, Spinner } from "@chakra-ui/react";
 import ExpandableText from "../components/ExpandableText";
 import GameAttributes from "../components/GameAttributes";
 import GameTrailer from "../components/GameTrailer";
+import GameScreenshots from "../components/GameScreenshots";
 
 export default function GameDetailPage() {
   const { slug } = useParams();
-  const { data, isLoading, error } = useGame(slug!);
+  const { data: game, isLoading, error } = useGame(slug!);
 
   if (isLoading) return <Spinner />;
 
-  if (error || !data) throw error;
+  if (error || !game) throw error;
 
   return (
     <>
-      <Heading marginBottom={3}>{data.name}</Heading>
-      <ExpandableText>{data.description_raw}</ExpandableText>
-      <GameAttributes game={data} />
-      <GameTrailer gameId={data.id} />
+      <Heading marginBottom={3}>{game.name}</Heading>
+      <ExpandableText>{game.description_raw}</ExpandableText>
+      <GameAttributes game={game} />
+      <GameTrailer gameId={game.id} />
+      <GameScreenshots gameId={game.id} />
     </>
   );
 }
