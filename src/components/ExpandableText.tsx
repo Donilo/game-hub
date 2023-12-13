@@ -7,10 +7,13 @@ interface Props {
 
 export default function ExpandableText({ children }: Props) {
   const [expanded, setExpanded] = useState(false);
+  const limit = 300;
 
-  if (children.length < 300) return <Text>{children}</Text>;
+  if (children.length < limit) return <Text>{children}</Text>;
 
-  const description = expanded ? children : children.substring(0, 300) + "...";
+  const description = expanded
+    ? children + " "
+    : children.substring(0, limit) + "... ";
 
   return (
     <Text>
@@ -18,10 +21,8 @@ export default function ExpandableText({ children }: Props) {
       <Button
         onClick={() => setExpanded(!expanded)}
         colorScheme="yellow"
-        color="black"
         size="xs"
         fontWeight="bold"
-        marginX={2}
       >
         {expanded ? "Show Less" : "Read More"}
       </Button>

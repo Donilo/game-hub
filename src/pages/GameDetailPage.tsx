@@ -17,10 +17,11 @@ export default function GameDetailPage() {
   return (
     <SimpleGrid columns={{ base: 1, md: 2 }} spacing={5}>
       <GridItem>
-        <Heading marginBottom={3}>{game.name}</Heading>
+        <Heading mb={3}>{game.name}</Heading>
         <ExpandableText>{game.description_raw}</ExpandableText>
         <GameAttributes game={game} />
       </GridItem>
+
       <GridItem>
         <GameTrailer gameId={game.id} />
         <GameScreenshots gameId={game.id} />

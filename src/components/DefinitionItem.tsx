@@ -8,8 +8,8 @@ interface Props {
 
 export default function DefinitionItem({ term, children }: Props) {
   return (
-    <Box marginY={5}>
-      <Heading fontSize="md" color="gray.600" as="dt">
+    <Box my={5} as="dl">
+      <Heading as="dt" fontSize="2xl" color="gray.600">
         {term}
       </Heading>
       <dd>{children}</dd>

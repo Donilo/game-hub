@@ -14,7 +14,6 @@ export default function GameAttributes({ game }: Props) {
         base: 1,
         md: 2,
       }}
-      as="dl"
     >
       <DefinitionItem term="Platforms">
         {game.parent_platforms.map(({ platform }) => (
