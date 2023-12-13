@@ -10,26 +10,22 @@ export default function HomePage() {
     <Grid
       templateAreas={{
         base: `"main"`,
+        md: `"aside main"`,
         lg: `"aside main"`,
       }}
       templateColumns={{
         base: "1fr",
+        md: "1fr",
         lg: "200px 1fr",
       }}
     >
       <Show above="lg">
-        <GridItem area="aside">
+        <GridItem area="aside" pl={3}>
           <GenreList />
         </GridItem>
       </Show>
 
-      <GridItem
-        area="main"
-        padding={{
-          base: 2,
-          lg: 5,
-        }}
-      >
+      <GridItem area="main" overflow="hidden">
         <GameHeading />
         <HStack marginY={3} spacing={3}>
           <PlatformSelector />

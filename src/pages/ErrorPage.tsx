@@ -1,13 +1,13 @@
 import { Box, Heading, Text } from "@chakra-ui/react";
 import { isRouteErrorResponse, useRouteError } from "react-router-dom";
-import NavBar from "../components/NavBar";
+import Navbar from "../components/Navbar";
 
 export default function ErrorPage() {
   const error = useRouteError();
 
   return (
     <>
-      <NavBar />
+      <Navbar />
       <Box padding="5">
         <Heading fontSize="2xl">Ooops!</Heading>
         <Text>
