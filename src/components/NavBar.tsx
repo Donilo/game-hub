@@ -1,9 +1,9 @@
-import { Box, HStack, Heading, Image, Show } from "@chakra-ui/react";
-import logo from "../assets/logo.webp";
-import ColorMode from "./ColorModeSwitch";
-import SearchInput from "./SearchInput";
+import { HStack, Show, Heading, Box, Image } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import DrawerNavbar from "./DrawerNavbar";
+import SearchInput from "./SearchInput";
+import ColorMode from "./ColorMode";
+import logo from "../assets/logo.webp";
 
 export default function Navbar() {
   return (

@@ -1,7 +1,7 @@
 import { Box, Center, Heading, Icon, Text } from "@chakra-ui/react";
 import { Link, isRouteErrorResponse, useRouteError } from "react-router-dom";
-import Navbar from "../components/Navbar";
 import { BsHouseFill } from "react-icons/bs";
+import Navbar from "../components/Navbar";
 
 export default function ErrorPage() {
   const error = useRouteError();
