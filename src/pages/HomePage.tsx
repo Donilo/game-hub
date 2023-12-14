@@ -10,12 +10,10 @@ export default function HomePage() {
     <Grid
       templateAreas={{
         base: `"main"`,
-        md: `"aside main"`,
         lg: `"aside main"`,
       }}
       templateColumns={{
         base: "1fr",
-        md: "1fr",
         lg: "200px 1fr",
       }}
     >

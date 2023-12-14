@@ -1,4 +1,4 @@
-import { Alert, SimpleGrid, Spinner } from "@chakra-ui/react";
+import { Alert, Box, SimpleGrid, Spinner } from "@chakra-ui/react";
 import React from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import useGames from "../hooks/useGames";
@@ -20,9 +20,11 @@ export default function GameGrid() {
 
   if (error)
     return (
-      <Alert borderRadius="7px" ml="10px" mt="9px" colorScheme="red">
-        {error.message}
-      </Alert>
+      <Box p="10px">
+        <Alert borderRadius="7px" ml="10px" mt="9px" colorScheme="red">
+          {error.message}
+        </Alert>
+      </Box>
     );
 
   return (

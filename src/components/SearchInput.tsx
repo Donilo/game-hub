@@ -15,6 +15,7 @@ export default function SearchInput() {
         event.preventDefault();
         if (ref.current) {
           setSearchText(ref.current.value);
+          ref.current.value = "";
           navigate("/");
         }
       }}

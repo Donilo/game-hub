@@ -20,7 +20,14 @@ export default function SortSelector() {
 
   return (
     <Menu>
-      <MenuButton as={Button} rightIcon={<BsChevronDown />}>
+      <MenuButton
+        size={{
+          base: "xs",
+          md: "md",
+        }}
+        as={Button}
+        rightIcon={<BsChevronDown />}
+      >
         Order by: {currentOrder?.label || "Relevance"}
       </MenuButton>
 
