@@ -15,12 +15,7 @@ interface Props {
   image: string;
 }
 
-export default function ImageModalView({
-  isOpen,
-  onOpen,
-  onClose,
-  image,
-}: Props) {
+export default function ImageModalView({ isOpen, onClose, image }: Props) {
   return (
     <Modal isOpen={isOpen} onClose={onClose} size="5xl">
       <ModalOverlay />

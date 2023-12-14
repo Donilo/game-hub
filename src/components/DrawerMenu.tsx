@@ -22,7 +22,6 @@ interface Props {
 
 export default function DrawerMenu({
   isOpen,
-  onOpen,
   onClose,
   header,
   children,
