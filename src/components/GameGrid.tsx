@@ -21,7 +21,7 @@ export default function GameGrid() {
   if (error)
     return (
       <Box p="10px">
-        <Alert borderRadius="7px" ml="10px" mt="9px" colorScheme="red">
+        <Alert borderRadius="7px" mt="9px" colorScheme="red">
           {error.message}
         </Alert>
       </Box>

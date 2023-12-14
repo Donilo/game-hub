@@ -4,6 +4,8 @@ import GameHeading from "../components/GameHeading";
 import GenreList from "../components/GenreList";
 import PlatformSelector from "../components/PlatformSelector";
 import SortSelector from "../components/SortSelector";
+import ClearSelectedQueriesButton from "../components/ClearSelectedQueriesButton";
+import DrawerGenres from "../components/DrawerGenres";
 
 export default function HomePage() {
   return (
@@ -27,9 +29,13 @@ export default function HomePage() {
         <Box pl="10px">
           <GameHeading />
           <HStack marginY={3}>
+            <Show below="lg">
+              <DrawerGenres />
+            </Show>
             <PlatformSelector />
             <SortSelector />
           </HStack>
+          <ClearSelectedQueriesButton />
         </Box>
         <GameGrid />
       </GridItem>

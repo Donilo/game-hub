@@ -10,10 +10,17 @@ export default function GameHeading() {
   const platformId = useGameQueryStore((s) => s.gameQuery.platformId);
   const platform = usePlatform(platformId);
 
-  const heading = `${platform?.name || ""} ${genre?.name || ""} Games`;
+  const searchText = useGameQueryStore((s) => s.gameQuery.searchText);
+  if (searchText)
+    return (
+      <Heading as="h1" mb={5} fontSize="5xl" fontWeight="400">
+        {`Search result: "${searchText}"`}
+      </Heading>
+    );
 
+  const heading = `${platform?.name || ""} ${genre?.name || ""} Games`;
   return (
-    <Heading marginBottom={5} as="h1" fontSize="5xl">
+    <Heading mb={5} as="h1" fontSize="5xl" fontWeight="400">
       {heading}
     </Heading>
   );
