@@ -7,7 +7,7 @@ export default function SortSelector() {
   const orderBy = useGameQueryStore((s) => s.gameQuery.orderBy);
 
   const ordering = [
-    { value: "", label: "Relevance" },
+    { value: undefined, label: "Relevance" },
     { value: "name", label: "Name" },
     { value: "-metacritic", label: "Rating" },
     { value: "-rating", label: "Popularity" },
@@ -29,7 +29,7 @@ export default function SortSelector() {
           <MenuItem
             key={order.value}
             value={order.value}
-            onClick={() => setOrderBy(order.value)}
+            onClick={() => setOrderBy(order.value!)}
           >
             {order.label}
           </MenuItem>

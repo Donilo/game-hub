@@ -11,7 +11,7 @@ const useGames = () => {
 
   return useInfiniteQuery<FetchData<Game>, Error>({
     queryKey: ["games", gameQuery],
-    queryFn: ({ pageParam = 1 }) =>
+    queryFn: ({ pageParam }) =>
       apiClient.getAll({
         params: {
           genres: gameQuery.genreId,
@@ -19,9 +19,9 @@ const useGames = () => {
           ordering: gameQuery.orderBy,
           search: gameQuery.searchText,
           page: pageParam,
-          page_size: 21,
         },
       }),
+    initialPageParam: 1,
     getNextPageParam: (lastPage, allPages) => {
       return lastPage.next ? allPages.length + 1 : undefined;
     },

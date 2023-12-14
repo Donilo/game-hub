@@ -1,10 +1,18 @@
-import { Card, CardBody, HStack, Heading, Image } from "@chakra-ui/react";
+import {
+  CardBody,
+  CardFooter,
+  HStack,
+  Heading,
+  Image,
+  List,
+} from "@chakra-ui/react";
 import Game from "../entities/Game";
 import PlatformIconList from "./PlatformIconList";
 import Metacritic from "./Metacritic";
 import getCroppedImageUrl from "../services/imageUrl";
-import Star from "./Star";
 import { Link } from "react-router-dom";
+import GameCardContainer from "./GameCardContainer";
+import GameStars from "./GameStars";
 
 interface Props {
   game: Game;
@@ -12,20 +20,28 @@ interface Props {
 
 export default function GameCard({ game }: Props) {
   return (
-    <Card overflow="hidden">
-      <Image src={getCroppedImageUrl(game.background_image)} />
+    <GameCardContainer>
+      <Link to={`/games/${game.slug}`}>
+        <Image src={getCroppedImageUrl(game.background_image)} />
+      </Link>
+
       <CardBody>
-        <HStack justifyContent="space-between" marginBottom={2}>
+        <HStack mb="10px">
+          <GameStars rating={game.rating_top} />
+        </HStack>
+        <Link to={`/games/${game.slug}`}>
+          <Heading fontSize="2xl">{game.name}</Heading>
+        </Link>
+      </CardBody>
+
+      <CardFooter justifyContent="space-between">
+        <List>
           <PlatformIconList
             platforms={game.parent_platforms.map((p) => p.platform)}
           />
-          <Metacritic metacritic={game.metacritic} />
-        </HStack>
-        <Heading fontSize="20px">
-          <Link to={"games/" + game.slug}>{game.name}</Link>
-        </Heading>
-        <Star rating={game.rating_top} />
-      </CardBody>
-    </Card>
+        </List>
+        <Metacritic metacritic={game.metacritic} />
+      </CardFooter>
+    </GameCardContainer>
   );
 }
